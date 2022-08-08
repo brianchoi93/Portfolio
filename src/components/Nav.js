@@ -5,10 +5,10 @@ function Nav(props) {
   return (
     <div>
       <Link to = "/">Home</Link>
-      <Link to = "/aboutme">About Me</Link>
+      <Link to = "/about-me">About Me</Link>
       <Link to = "/projects">Projects</Link>
       <Link to = "/skills">Skills</Link>
-      <Link to = "/contactme">Contact Me</Link>
+      <Link to = "/contact">Contact Me</Link>
     </div>
   );
 }
