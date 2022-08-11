@@ -1,26 +1,32 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Link } from "react-router-dom"
 import './App.css';
-import Nav from "./components/Nav";
-import HomePage from "./components/HomePage";
-import AboutMe from "./components/AboutMe";
+import Card from 'react-bootstrap/Card';
+import Navigation from "./components/Navigation";
+import Home from "./components/Home";
+import About from "./components/About";
 import Project from "./components/Project";
-import Skills from "./components/Skills";
-import ContactMe from "./components/ContactMe";
+import Skill from "./components/Skill";
+import Contact from "./components/Contact";
 
 function App() {
+
   return (
     <div className="App">
       <nav>
-        <Nav />
+        <Navigation />
       </nav>
       <main>
-        <Routes>
-          <Route path = "/" element = { <HomePage/> } />
-          <Route path = "/about-me" element= { <AboutMe/> } />
+        <Home />
+        <About />
+        <Project />
+        {/* <Routes>
+          <Route path = "/" element = { <Home/> } />
+          <Route path = "/about-me" element= { <About/> } />
           <Route path = "/projects" element = { <Project/> } />
-          <Route path = "/skills" element = { <Skills/> } />
-          <Route path = "/contact" element = { <ContactMe /> } />
-        </Routes>
+          <Route path = "/skills" element = { <Skill/> } />
+          <Route path = "/contact" element = { <Contact /> } />
+        </Routes> */}
       </main>
     </div>
   );
