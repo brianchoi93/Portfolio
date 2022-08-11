@@ -1,0 +1,31 @@
+.project-container {
+  margin-bottom: 16px;
+  border: none;
+}
+
+.proj-header {
+  margin-bottom: 20px;
+}
+
+.card-container {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 670px) {
+  
+  .project-container {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  
+  .card-container {
+    width: 18rem;
+    margin: 10px;
+  }
+  
+  .proj-text {
+    font-size: 14px;
+  }
+
+}

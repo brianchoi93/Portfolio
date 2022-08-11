@@ -1,0 +1,11 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  height: 25vh;
+}
+.welcome-msg {
+  font-family: 'Averta', sans-serif;
+}
+
