@@ -1,5 +1,13 @@
-.contact-container {
-  margin-top: 16px;
+
+.close-btn {
+  border: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-secondary {
+  --bs-btn-bg: none;
+  --bs-btn-border-color: none;
 }
 
 @media screen and (min-width: 670px) {

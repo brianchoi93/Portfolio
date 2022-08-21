@@ -21,7 +21,8 @@
 @media screen and (min-width: 670px) {
   .about-div {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
 
   .about-container {
@@ -36,7 +37,8 @@
   }
 
   .about-body {
-    text-align: center;
-    font-size: 15px;
+    text-align: start;
+    font-size: 17px;
   }
+
 }

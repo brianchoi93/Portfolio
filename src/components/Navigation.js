@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
 import '../styles/Navigation.css';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Element, Events, animateScroll as scroll, scroller } from 'react-scroll'
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import Contact from './Contact';
 
-function Navigation(props) {
+function Navigation() {
   return (
     <div>
       <Navbar collapseOnSelect expand="md" bg="inherit" variant="dark">
@@ -15,10 +14,7 @@ function Navigation(props) {
           <Navbar.Collapse>
             <Nav>
               <Nav.Link name="home" href="/">Home</Nav.Link>
-              <Nav.Link href="/about-me">About</Nav.Link>
-              <Nav.Link href="/projects">Projects</Nav.Link>
-              {/* <Nav.Link href="/skills">Skills</Nav.Link> */}
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Contact />
               <Nav.Link href="https://docs.google.com/document/d/1jMCklSXmRvxtPlw_NSoqROH22MQ30ToBMUeUw1ac5Q4/edit?usp=sharing" target="_blank">Resume</Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -1,34 +1,41 @@
+import { useState } from 'react';
 import '../styles/Contact.css'
-import { Card, Form, Button } from 'react-bootstrap';
+import { Modal, Form, Button, Nav } from 'react-bootstrap';
+import { IoLogoGithub, IoMailOutline, IoLogoLinkedin } from "react-icons/io5";
 
-function Contact(props) {
+
+
+function Contact() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <div>
-      <Card className="contact-container">
-        <Card.Header className="contact-header">Let's Talk!</Card.Header>
-        <Form>
-          <Form.Group className="mb-3">
-            <Form.Label>First Name</Form.Label>
-            <Form.Control type="firstname" placeholder="First Name"></Form.Control>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control type="lastname" placeholder="Last Name"></Form.Control>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Email Address</Form.Label>
-            <Form.Control type = "email" placeholder="example@email.com"></Form.Control>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Send me a message</Form.Label>
-            <Form.Control as="textarea" rows={4}></Form.Control>
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-      </Card>
-    </div>
+    <>
+      <Nav.Link variant="primary" onClick={handleShow}>
+        Contact
+      </Nav.Link>
+
+      <Modal show={show} size="sm" onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title>Let's Talk!</Modal.Title>
+          <Button onClick={handleClose} className="close-btn">X</Button>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Button href="https://github.com/brianchoi93" target="_blank">
+              <IoLogoGithub />
+            </Button>
+            <Button href="https://www.linkedin.com/in/byoungkchoi/" target="_blank">
+              <IoLogoLinkedin />
+            </Button>
+            <Button href="mailto:brianchoi93@gmail.com">
+              <IoMailOutline />
+            </Button>
+          </Form>
+        </Modal.Body>
+      </Modal>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 .project-container {
   margin-bottom: 16px;
   border: none;
+  height: 100vh;
 }
 
 .proj-header {
@@ -9,19 +10,49 @@
 
 .card-container {
   margin-bottom: 10px;
+  border: none;
+}
+
+.proj-img {
+  width: 100%;
+  height: 10em;
+}
+
+.proj-title {
+  margin: 20px;
+}
+
+.btn-primary {
+  --bs-btn-bg: none;
+  --bs-btn-border-color: #ff3030;
+  --bs-btn-hover-bg: none;
+  --bs-btn-hover-border-color: #ff3030;
+  margin: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+
 }
 
 @media screen and (min-width: 670px) {
   
   .project-container {
-    display: flex;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
     margin-bottom: 10px;
-    justify-content: center;
+    height: 100vh;
   }
   
+  .proj-header {
+    grid-column: 1 / 4;
+  }
+
   .card-container {
     width: 18rem;
-    margin: 10px;
+    align-self: start;
+    justify-self: center;
+    border: none;
   }
   
   .proj-text {

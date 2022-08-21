@@ -6,6 +6,27 @@
   height: 25vh;
 }
 .welcome-msg {
-  font-family: 'Averta', sans-serif;
+  font-size: 30px;
 }
 
+.welcome-p {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 670px) {
+  .home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 0;
+  }
+
+  .welcome-msg {
+    font-size: 100px;
+  }
+
+  .welcome-p {
+    font-size: 40px;
+  }
+}
